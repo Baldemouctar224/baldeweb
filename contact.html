@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Baldeweb</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>BALDEWEB</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="portfilio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="services">
+    <h2>Contacte-moi</h2>
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Ton nom" required>
+      <input type="email" name="email" placeholder="Ton email" required>
+      <textarea name="message" placeholder="Ton message" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BALDEWEB. Tous droits réservés.</p>
+  </footer>
+  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("mUIrfCCOFr5ROIVwu");  // Ta clé publique
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();  // Empêche l'envoi classique du formulaire
+
+      // Envoi via EmailJS
+      emailjs.sendForm('service_4gcjcbs', 'template_wcmczv9', this)  // Remplace par ton Service ID et Template ID
+        .then(function(response) {
+          alert("Message envoyé avec succès !");
+        }, function(error) {
+          alert("Erreur lors de l'envoi...");
+        });
+    });
+  </script>
+
+</body>
+</html>
