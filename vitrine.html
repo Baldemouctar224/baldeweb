@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site Vitrine - Baldeweb</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="logo-top-left">
+    <a href="index.html">
+      <img src="logo.png" alt="Logo BALDEWEB">
+    </a>
+  </div>
+  <header class="vitrine-header">
+    <h1>BALDEWEB</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfilio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="vitrine-intro">
+    <h2>Des sites vitrines a l'image de vos entreprises </h2>
+  </section>
+
+  <!-- Carrousel d'images -->
+  <section class="vitrine-gallery">
+    <h2>Nos réalisations</h2>
+    <div class="image-carousel" id="carousel">
+        <a href="mise-a-plat-du-poste-de-travail-avec-espace-copie-et-ordinateur-portable" >
+            <img src="mise-a-plat-du-poste-de-travail-avec-espace-copie-et-ordinateur-portable.jpg" alt="">
+        </a>
+
+        <a href="" target="_blank" rel="noopener noreferrer">
+            <img src="nature-morte-de-livres-contre-technologie.jpg" alt="">
+        </a>
+
+        <a href="" target="_blank" rel="noopener noreferrer">
+            <img src="v1.jpg" alt="">
+        </a>
+
+        <a href="" target="_blank" rel="noopener noreferrer">
+            <img src="vitrine cover.jpg" alt="">
+        </a>
+
+        <a href="" target="_blank" rel="noopener noreferrer">
+            <img src="angle-de-bureau-eleve-avec-ordinateur-portable-et-espace-de-copie.jpg" alt="">
+        </a>
+      
+      
+    </div>
+  </section>
+
+  <!-- Section Vidéos -->
+  <section class="vitrine-videos">
+    <h2>En vidéo</h2>
+    <div class="video-gallery">
+      <video src="videos/video1.mp4" autoplay muted loop></video>
+      <video src="videos/video2.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BALDEWEB. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    const carousel = document.getElementById("carousel");
+    let scrollAmount = 0;
+
+    function scrollImages() {
+      scrollAmount += 1;
+      if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+        scrollAmount = 0;
+      }
+      carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }
+
+    setInterval(scrollImages, 20);
+  </script>
+</body>
+</html>
