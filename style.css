@@ -19,12 +19,15 @@
     
   
   
-  header {
-    background-color: none ;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
+   
+    header {
+      background-color: none ;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  
+  
   
   header h1 {
     margin-bottom: 10px;
@@ -129,3 +132,164 @@
   h2{
     color: white;
   }
+
+
+
+  .image-container {
+    background-image: url('mise-a-plat-du-poste-de-travail-avec-espace-copie-et-ordinateur-portable.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 796px;
+    height: 415px;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+
+  
+  .image-container1 {
+    background-image: url('vitrine\ cover.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 796px;
+    height: 415px;
+    position: relative;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  
+  .image-container2 {
+    background-image: url('ecom\ cov.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 796px;
+    height: 415px;
+    position: relative;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .image-container3 {
+    background-image: url('dev.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 796px;
+    height: 415px;
+    position: relative;
+    color: yellow ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+
+  /* style du site vitrine */
+
+  
+  
+  .vitrine-header {
+   
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .vitrine-header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .vitrine-header nav ul li {
+    margin: 0 15px;
+  }
+  
+  .vitrine-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .vitrine-intro {
+    text-align: center;
+    padding: 40px 20px;
+    
+  }
+  
+  .vitrine-gallery {
+    padding: 20px;
+    
+  }
+  
+  .image-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  .image-carousel img {
+    height: 200px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  
+  .vitrine-videos {
+    padding: 20px;
+    
+    text-align: center;
+  }
+  
+  .video-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .video-gallery video {
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+  }
+  .vitrine{
+    color: white;
+  }
+  
+
+  .logo-top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+  
+  .logo-top-left img {
+    height: 150px;
+  }
+  
