@@ -17,7 +17,7 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function() {
-    emailjs.init("mUIrfCCOFr5ROIVwu"); // Remplace par ta vraie Public Key
+    emailjs.init("mUIrfCCOFr5ROIVwu"); // Ta vraie public key
 
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -25,7 +25,8 @@
       emailjs.sendForm('service_4gcjcbs', 'template_wcmczv9', this)
         .then(function() {
           alert("✅ Message envoyé !");
-          window.location.href = "success.html"; // Redirection optionnelle
+          // ✅ Redirection sans erreur 404
+          window.location.href = "https://baldemouctar224.github.io/baldeweb/contact.html#success";
         }, function(error) {
           console.error("Erreur lors de l'envoi :", error);
           alert("❌ Erreur lors de l'envoi du message. Veuillez réessayer.");
