@@ -37,23 +37,40 @@
   <footer>
     <p>&copy; 2025 BALDEWEB. Tous droits réservés.</p>
   </footer>
-  
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    emailjs.init("mUIrfCCOFr5ROIVwu");  // Ta clé publique
+<script>
+  // Initialisation de EmailJS
+  (function() {
+    emailjs.init("mUIrfCCOFr5ROIVwu"); // Ta clé publique
+  })();
 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();  // Empêche l'envoi classique du formulaire
+  // Attendre que le DOM soit chargé
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('contact-form');
+
+    if (!form) {
+      console.error("❌ Le formulaire avec l'ID 'contact-form' est introuvable !");
+      return;
+    }
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche le rechargement de la page
 
       // Envoi via EmailJS
-      emailjs.sendForm('service_4gcjcbs', 'template_wcmczv9', this)  // Remplace par ton Service ID et Template ID
+      emailjs.sendForm('service_4gcjcbs', 'template_wcmczv9', this)
         .then(function(response) {
-          alert("Message envoyé avec succès !");
-        }, function(error) {
-          alert("Erreur lors de l'envoi...");
+          alert("✅ Message envoyé avec succès !");
+          window.location.href = "success"; // Redirection symbolique
+        })
+        .catch(function(error) {
+          alert("❌ Erreur lors de l'envoi...");
+          console.error("Erreur EmailJS :", error);
         });
     });
-  </script>
+  });
+</script>
+
+ 
 
 </body>
 </html>
